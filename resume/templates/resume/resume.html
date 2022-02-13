@@ -1,0 +1,24 @@
+{% include "layout/nav.html" %}
+
+<Title>Resume | Colbe's Portfolio</Title>
+
+<div class="container mt-5 text-center pb-2" id="main">
+    <h1 class="main">Resume</h1>
+    <p>
+        My resume. Ready and available to be downloaded.
+    </p>
+</div>
+
+
+{% for resume in resumes %}
+    <div class="mx-auto mt-5 text-center"><a class="button px-2" href="{{ resume.resume.url }}">Download</a></div>
+    <iframe
+        src="{{ resume.link }}"
+        frameBorder="0"
+        scrolling="auto"
+        height="100%"
+        width="100%"
+        class="mt-5 mx-auto"
+    ></iframe>
+{% endfor %}
+{% include "layout/footer.html" %}

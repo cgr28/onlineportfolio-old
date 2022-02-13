@@ -1,0 +1,22 @@
+{% include "layout/nav.html" %}
+
+<Title>Home | Colbe's Portfolio</Title>
+
+<div class="container mt-5 text-center pb-2" id="main">
+    <h1 class="main">Colbe's Portfolio</h1>
+    <p>
+        Hi, thanks for visiting my online portfolio! My name is Colbe Roberson, I'm currently a junior computer science major at the New Jersey Institute of Technology.  
+        I have an interest in various fields of computer science and technology.
+    </p>
+</div>
+<h1 class="text-center mt-5 main">Skills</h1>
+<div id="skills" class="container">
+{% for skill in skills %}
+    <p class="m-2 main">{{ skill.name }}</p>
+    <div class="box outer-skill-box" style="background-color:#4D724D;">
+        <div class="skills box" style="width:{{ skill.proficiency }}%;background-color:#8DB48E;text-align:right;color:#F5F5F5;font-weight: bold;">{{ skill.proficiency }}%</div>
+    </div>
+{% endfor %}
+</div>
+
+{% include "layout/footer.html" %}

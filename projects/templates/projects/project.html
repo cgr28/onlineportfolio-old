@@ -1,0 +1,16 @@
+{% include "layout/nav.html" %}
+
+<Title>{{project.title}} | Colbe's Portfolio</Title>
+
+<div class="container mt-5 text-center pb-2" id="main">
+    <h1 class="main">{{ project.title }}</h1>
+</div>
+
+<div class="container mt-5" id="main">
+    <div class="text-center"><img src="{{ project.img.url }}" alt="project image" width="50%"></div>
+
+    <p class="text-center mt-3">{{ project.long_descr }}</p>
+    <div target="_blank" rel="noopener noreferrer"  class="text-center mt-2"><a class="button px-2" href="{{ project.link }}"> {{ project.link_name }}</a></div>
+</div>
+
+{% include "layout/footer.html" %}

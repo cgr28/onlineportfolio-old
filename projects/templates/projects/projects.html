@@ -1,0 +1,28 @@
+{% include "layout/nav.html" %}
+
+<Title>Projects | Colbe's Portfolio</Title>
+
+<div class="container mt-5 text-center pb-2" id="main">
+    <h1 class="main">Projects</h1>
+    <p>
+        These are some of the various projects I've made through the years.  Some were completed in school, though most were done outside of class as personal projects.
+    </p>
+</div>
+<div class="container" style="width:60%">
+<div class="row">
+    {% for p in project %}
+        <div class="col-md-12 col-lg-6">
+            <div id="card" class="card mx-auto mt-5" style="max-width: 18rem;">
+                <img class="mx-auto py-2" src="{{ p.img.url }}" alt="card image" width="50%">
+                <div class="card-body text-center" style="width:75%; margin: auto;">
+                    <h4 class="card-title">{{ p.title }}</h4>
+                    <p class="py-2 mt-2">{{ p.short_descr }} </p>
+                    <a class="button px-2" href="{% url 'projects:project' p.id %}">See more</a>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+    </div>
+</div>
+
+{% include "layout/footer.html" %}

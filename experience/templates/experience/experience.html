@@ -1,0 +1,94 @@
+{% include "layout/nav.html" %}
+
+<Title>Experience | Colbe's Portfolio</Title>
+
+<div class="container mt-5 text-center pb-2" id="main">
+    <h1 class="main">Jobs</h1>
+    <p>
+        These are jobs I previously held or currently hold.
+    </p>
+</div>
+
+{% for job in jobs %}
+    <div class="container experience mt-5">
+        <div id="card-horiz" class="card p-2">
+            <div class="row no-gutters">
+                <div class="col-md-12 col-lg-5 my-auto">
+                <div class="container">
+                    <img class="card-img" src="{{ job.img }}" alt="card image" height="50%">
+                </div>
+                </div>
+                <div class="col-lg-7 col-md-12">
+                    <div class="card-body text-center">
+                        <h3 class="card-title">{{ job.title }}</h3>
+                        <h6 class="card-title">{{ job.role }}</h6>
+                        <p class="card-text">{{ job.descr }}</p>
+                        <h6 class="card-title"> {{ job.period }}</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endfor %}
+
+<div class="container mt-5 text-center pb-2" id="main">
+    <h1 class="main">Clubs</h1>
+    <p>
+        These are some clubs that I've been apart of.
+    </p>
+</div>
+
+{% for club in clubs %}
+    <div class="container experience mt-5">
+        <div id="card-horiz" class="card p-2">
+            <div class="row no-gutters">
+                <div class="col-md-12 col-lg-5 my-auto">
+                <div class="container">
+                    <img class="card-img" src="{{ club.img.url }}" alt="card image" height="50%">
+                </div>
+                </div>
+                <div class="col-lg-7 col-md-12">
+                    <div class="card-body text-center">
+                        <h3 class="card-title">{{ club.title }}</h3>
+                        <h6 class="card-title">{{ club.role }}</h6>
+                        <p class="card-text">{{ club.descr }}</p>
+                        <h6 class="card-title"> {{ club.period }}</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endfor %}
+
+<div class="container mt-5 text-center pb-2" id="main">
+    <h1 class="main">Education</h1>
+    <p>
+        Any schooling I've recieved after high-school.
+    </p>
+</div>
+
+{% for school in schools %}
+    <div class="container experience mt-5">
+        <div id="card-horiz" class="card p-1">
+            <div class="row no-gutters">
+                <div class="col-md-12 col-lg-5 my-auto">
+                <div class="container">
+                    <img class="card-img" src="{{ school.img.url }}" alt="card image" height="50%">
+                </div>
+                </div>
+                <div class="col-lg-7 col-md-12">
+                    <div class="card-body text-center mx-auto">
+                        <h3 class="card-title">{{ school.title }}</h3>
+                        <h6 class="card-title">{{ school.role }}</h6>
+                        <p class="card-text">{{ school.descr }}</p>
+                        <h6 class="card-title"> {{ school.period }}</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endfor %}
+
+
+
+{% include "layout/footer.html" %}
