@@ -7,5 +7,4 @@ def index(request):
     context = {
         "resumes": resume,
     }
-    print(resume[0].link)
     return render(request, "resume/resume.html", context)

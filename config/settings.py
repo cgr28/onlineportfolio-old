@@ -28,7 +28,7 @@ else:
     SECRET_KEY = os.environ['DJANGO_SECRET_KEY']
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ["*"]
 
@@ -85,10 +85,17 @@ WSGI_APPLICATION = 'config.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
+
+#postgres://zaqipumxwpxqgk:b78d0a85e899757ca06b026d0af831755a55b5a0634e14102c3a866d1e1e28db@ec2-34-233-214-228.compute-1.amazonaws.com:5432/ddugqcba656nmg
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': "ddugqcba656nmg",
+        'HOST': 'ec2-34-233-214-228.compute-1.amazonaws.com',
+        'PORT': 5432,
+        'USER': 'zaqipumxwpxqgk',
+        'PASSWORD': 'b78d0a85e899757ca06b026d0af831755a55b5a0634e14102c3a866d1e1e28db',
     }
 }
 
