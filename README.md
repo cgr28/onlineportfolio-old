@@ -6,5 +6,5 @@ Displays:
 - My resume.
 - My experience.  
 
-Tools Used: Django, JS, Python, Bootstrap, HTML, CSS  
+Tools Used: Django, Python, Bootstrap, HTML, CSS  
 View at: https://colbe.herokuapp.com/ (may take a while to load)
